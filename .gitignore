@@ -1,1 +1,10 @@
 *.fastq.gz
+*.fasta
+*.bam
+*.err
+*.out
+*.fai
+*.csi
+*.stderr
+*.gv
+*.gfa
