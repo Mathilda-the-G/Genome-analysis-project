@@ -5,7 +5,7 @@
 #SBATCH -J Trimmomatic_DNA_1 #name of the job
 #SBATCH -c 1 #cores
 #SBATCH -t 2:00:00 #time
-#SBATCH --mem=20GB #memory allocated to job
+#SBATCH --mem=50GB #memory allocated to job
 #SBATCH --output=%x.%j.out  #output file
 #SBATCH --error=%x.%j.err  #error file
 

@@ -4,8 +4,8 @@
 #SBATCH -M pelle #partition
 #SBATCH -J flye_Nanopore_1 #name of the job
 #SBATCH -c 1 #cores
-#SBATCH -t 64:00:00 #time
-#SBATCH --mem=96GB #memory allocated to job
+#SBATCH -t 56:00:00 #time
+#SBATCH --mem=64GB #memory allocated to job
 #SBATCH --output=%x.%j.out  #output file
 #SBATCH --error=%x.%j.err  #error file
 
