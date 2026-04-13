@@ -1,0 +1,60 @@
+Started analysis of chr3_illumina_R1.fastq.gz
+Approx 5% complete for chr3_illumina_R1.fastq.gz
+Approx 10% complete for chr3_illumina_R1.fastq.gz
+Approx 15% complete for chr3_illumina_R1.fastq.gz
+Approx 20% complete for chr3_illumina_R1.fastq.gz
+Approx 25% complete for chr3_illumina_R1.fastq.gz
+Approx 30% complete for chr3_illumina_R1.fastq.gz
+Approx 35% complete for chr3_illumina_R1.fastq.gz
+Approx 40% complete for chr3_illumina_R1.fastq.gz
+Approx 45% complete for chr3_illumina_R1.fastq.gz
+Approx 50% complete for chr3_illumina_R1.fastq.gz
+Approx 55% complete for chr3_illumina_R1.fastq.gz
+Approx 60% complete for chr3_illumina_R1.fastq.gz
+Approx 65% complete for chr3_illumina_R1.fastq.gz
+Approx 70% complete for chr3_illumina_R1.fastq.gz
+Approx 75% complete for chr3_illumina_R1.fastq.gz
+Approx 80% complete for chr3_illumina_R1.fastq.gz
+Approx 85% complete for chr3_illumina_R1.fastq.gz
+Approx 90% complete for chr3_illumina_R1.fastq.gz
+Approx 95% complete for chr3_illumina_R1.fastq.gz
+Failed to process file chr3_illumina_R1.fastq.gz
+java.io.FileNotFoundException: /crex/proj/uppmax2026-1-61/Genome_Analysis/2_Zhou_2023/reads/genomics_chr3_data/chr3_illumina_R1_fastqc.zip (Permission denied)
+	at java.base/java.io.FileOutputStream.open0(Native Method)
+	at java.base/java.io.FileOutputStream.open(FileOutputStream.java:293)
+	at java.base/java.io.FileOutputStream.<init>(FileOutputStream.java:235)
+	at java.base/java.io.FileOutputStream.<init>(FileOutputStream.java:184)
+	at uk.ac.babraham.FastQC.Report.HTMLReportArchive.<init>(HTMLReportArchive.java:80)
+	at uk.ac.babraham.FastQC.Analysis.OfflineRunner.analysisComplete(OfflineRunner.java:189)
+	at uk.ac.babraham.FastQC.Analysis.AnalysisRunner.run(AnalysisRunner.java:123)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+Started analysis of chr3_illumina_R2.fastq.gz
+Approx 5% complete for chr3_illumina_R2.fastq.gz
+Approx 10% complete for chr3_illumina_R2.fastq.gz
+Approx 15% complete for chr3_illumina_R2.fastq.gz
+Approx 20% complete for chr3_illumina_R2.fastq.gz
+Approx 25% complete for chr3_illumina_R2.fastq.gz
+Approx 30% complete for chr3_illumina_R2.fastq.gz
+Approx 35% complete for chr3_illumina_R2.fastq.gz
+Approx 40% complete for chr3_illumina_R2.fastq.gz
+Approx 45% complete for chr3_illumina_R2.fastq.gz
+Approx 50% complete for chr3_illumina_R2.fastq.gz
+Approx 55% complete for chr3_illumina_R2.fastq.gz
+Approx 60% complete for chr3_illumina_R2.fastq.gz
+Approx 65% complete for chr3_illumina_R2.fastq.gz
+Approx 70% complete for chr3_illumina_R2.fastq.gz
+Approx 75% complete for chr3_illumina_R2.fastq.gz
+Approx 80% complete for chr3_illumina_R2.fastq.gz
+Approx 85% complete for chr3_illumina_R2.fastq.gz
+Approx 90% complete for chr3_illumina_R2.fastq.gz
+Approx 95% complete for chr3_illumina_R2.fastq.gz
+Failed to process file chr3_illumina_R2.fastq.gz
+java.io.FileNotFoundException: /crex/proj/uppmax2026-1-61/Genome_Analysis/2_Zhou_2023/reads/genomics_chr3_data/chr3_illumina_R2_fastqc.zip (Permission denied)
+	at java.base/java.io.FileOutputStream.open0(Native Method)
+	at java.base/java.io.FileOutputStream.open(FileOutputStream.java:293)
+	at java.base/java.io.FileOutputStream.<init>(FileOutputStream.java:235)
+	at java.base/java.io.FileOutputStream.<init>(FileOutputStream.java:184)
+	at uk.ac.babraham.FastQC.Report.HTMLReportArchive.<init>(HTMLReportArchive.java:80)
+	at uk.ac.babraham.FastQC.Analysis.OfflineRunner.analysisComplete(OfflineRunner.java:189)
+	at uk.ac.babraham.FastQC.Analysis.AnalysisRunner.run(AnalysisRunner.java:123)
+	at java.base/java.lang.Thread.run(Thread.java:840)

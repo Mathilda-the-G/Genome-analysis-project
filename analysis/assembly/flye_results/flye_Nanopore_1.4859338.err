@@ -1,0 +1,78 @@
+[2026-04-10 16:41:20] INFO: Starting Flye 2.9.6-b1802
+[2026-04-10 16:41:20] INFO: >>>STAGE: configure
+[2026-04-10 16:41:20] INFO: Configuring run
+[2026-04-10 16:43:09] INFO: Total read length: 10024814876
+[2026-04-10 16:43:09] INFO: Reads N50/N90: 27021 / 7196
+[2026-04-10 16:43:09] INFO: Minimum overlap set to 7000
+[2026-04-10 16:43:09] INFO: >>>STAGE: assembly
+[2026-04-10 16:43:09] INFO: Assembling disjointigs
+[2026-04-10 16:43:09] INFO: Reading sequences
+[2026-04-10 16:44:43] INFO: Counting k-mers:
+0% 10% 20% 30% 40% 50% 60% 70% 80% 90% 100% 
+[2026-04-10 16:56:40] INFO: Filling index table (1/2)
+0% 10% 20% 30% 40% 50% 60% 70% 80% 90% 100% 
+[2026-04-10 17:29:33] INFO: Filling index table (2/2)
+0% 10% 20% 30% 40% 50% 60% 70% 80% 90% 100% 
+[2026-04-10 18:10:34] INFO: Extending reads
+[2026-04-10 18:16:53] INFO: Overlap-based coverage: 377
+[2026-04-10 18:16:53] INFO: Median overlap divergence: 0.0860724
+0% 30% 60% 70% 80% 90% 100% 
+[2026-04-11 01:29:46] INFO: Assembled 62 disjointigs
+[2026-04-11 01:29:47] INFO: Generating sequence
+0% 10% 20% 30% 40% 50% 60% 70% 80% 90% 100% 
+[2026-04-11 01:30:31] INFO: Filtering contained disjointigs
+0% 10% 20% 30% 40% 50% 60% 70% 80% 90% 100% 
+[2026-04-11 01:30:39] INFO: Contained seqs: 9
+[2026-04-11 01:30:40] INFO: >>>STAGE: consensus
+[2026-04-11 01:30:40] INFO: Running Minimap2
+[2026-04-11 03:09:34] INFO: Computing consensus
+[2026-04-11 04:22:13] INFO: Alignment error rate: 0.188485
+[2026-04-11 04:22:13] INFO: >>>STAGE: repeat
+[2026-04-11 04:22:13] INFO: Building and resolving repeat graph
+[2026-04-11 04:22:13] INFO: Parsing disjointigs
+[2026-04-11 04:22:14] INFO: Building repeat graph
+0% 10% 20% 30% 40% 50% 60% 70% 80% 90% 100% 
+[2026-04-11 04:22:53] INFO: Median overlap divergence: 0.0710152
+[2026-04-11 04:22:54] INFO: Parsing reads
+[2026-04-11 04:24:29] INFO: Aligning reads to the graph
+0% 10% 20% 30% 40% 50% 60% 70% 80% 90% 100% 
+[2026-04-11 05:00:25] INFO: Aligned read sequence: 8392944868 / 9049125522 (0.927487)
+[2026-04-11 05:00:25] INFO: Median overlap divergence: 0.0630233
+[2026-04-11 05:00:26] INFO: Mean edge coverage: 510
+[2026-04-11 05:00:26] INFO: Simplifying the graph
+[2026-04-11 05:00:28] INFO: >>>STAGE: contigger
+[2026-04-11 05:00:28] INFO: Generating contigs
+[2026-04-11 05:00:28] INFO: Reading sequences
+[2026-04-11 05:02:04] INFO: Generated 87 contigs
+[2026-04-11 05:02:04] INFO: Added 2 scaffold connections
+[2026-04-11 05:02:05] INFO: >>>STAGE: polishing
+[2026-04-11 05:02:05] INFO: Polishing genome (1/1)
+[2026-04-11 05:02:05] INFO: Running minimap2
+[2026-04-11 06:13:51] INFO: Separating alignment into bubbles
+[2026-04-11 07:00:01] ERROR: Thread exception
+[2026-04-11 07:00:01] ERROR: Traceback (most recent call last):
+  File "/sw/arch/eb/software/Flye/2.9.6-GCC-13.3.0/lib/python3.12/site-packages/flye/polishing/bubbles.py", line 101, in _thread_worker
+    _output_bubbles(ctg_bubbles, fout)
+  File "/sw/arch/eb/software/Flye/2.9.6-GCC-13.3.0/lib/python3.12/site-packages/flye/polishing/bubbles.py", line 195, in _output_bubbles
+    out_stream.write(branch + "\n")
+BlockingIOError: [Errno 11] write could not complete without blocking
+
+Traceback (most recent call last):
+  File "/sw/arch/eb/software/Flye/2.9.6-GCC-13.3.0/bin/flye", line 8, in <module>
+    sys.exit(main())
+             ^^^^^^
+  File "/sw/arch/eb/software/Flye/2.9.6-GCC-13.3.0/lib/python3.12/site-packages/flye/main.py", line 762, in main
+    _run(args)
+  File "/sw/arch/eb/software/Flye/2.9.6-GCC-13.3.0/lib/python3.12/site-packages/flye/main.py", line 499, in _run
+    jobs[i].run()
+  File "/sw/arch/eb/software/Flye/2.9.6-GCC-13.3.0/lib/python3.12/site-packages/flye/main.py", line 322, in run
+    pol.polish(self.in_contigs, self.args.reads, self.polishing_dir,
+  File "/sw/arch/eb/software/Flye/2.9.6-GCC-13.3.0/lib/python3.12/site-packages/flye/polishing/polish.py", line 94, in polish
+    make_bubbles(alignment_file, contigs_info, prev_assembly,
+  File "/sw/arch/eb/software/Flye/2.9.6-GCC-13.3.0/lib/python3.12/site-packages/flye/polishing/bubbles.py", line 147, in make_bubbles
+    raise error_queue.get()
+  File "/sw/arch/eb/software/Flye/2.9.6-GCC-13.3.0/lib/python3.12/site-packages/flye/polishing/bubbles.py", line 101, in _thread_worker
+    _output_bubbles(ctg_bubbles, fout)
+  File "/sw/arch/eb/software/Flye/2.9.6-GCC-13.3.0/lib/python3.12/site-packages/flye/polishing/bubbles.py", line 195, in _output_bubbles
+    out_stream.write(branch + "\n")
+BlockingIOError: [Errno 11] write could not complete without blocking

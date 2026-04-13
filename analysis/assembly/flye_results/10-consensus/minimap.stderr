@@ -1,0 +1,22 @@
+[samfaipath] build FASTA index...
+[M::mm_idx_gen::0.435*1.01] collected minimizers
+[M::mm_idx_gen::0.746*1.00] sorted minimizers
+[M::main::0.746*1.00] loaded/built the index for 53 target sequence(s)
+[M::mm_mapopt_update::0.795*1.00] mid_occ = 12
+[M::mm_idx_stat] kmer size: 15; skip: 10; is_hpc: 0; #seq: 53
+[M::mm_idx_stat::0.833*1.00] distinct minimizers: 3523953 (89.58% are singletons); average occurrences: 1.135; average spacing: 5.330; total length: 21321897
+[M::worker_pipeline::737.994*0.99] mapped 76972 sequences
+[M::worker_pipeline::1333.073*0.97] mapped 140649 sequences
+[M::worker_pipeline::1986.189*0.98] mapped 91065 sequences
+[M::worker_pipeline::2442.509*0.97] mapped 91725 sequences
+[M::worker_pipeline::2962.472*0.97] mapped 279639 sequences
+[M::worker_pipeline::3559.077*0.97] mapped 93298 sequences
+[M::worker_pipeline::4029.337*0.97] mapped 71992 sequences
+[M::worker_pipeline::4542.719*0.97] mapped 75570 sequences
+[M::worker_pipeline::4998.672*0.97] mapped 70206 sequences
+[M::worker_pipeline::5701.173*0.97] mapped 74838 sequences
+[M::worker_pipeline::5731.934*0.97] mapped 2908 sequences
+[M::main] Version: 2.24-r1155-dirty
+[M::main] CMD: flye-minimap2 -x map-ont -t 1 -a -p 0.5 -N 10 --sam-hit-only -L -K 1G -z 1000 -Q --secondary-seq -I 64G /home/magu2329/Genome_Analysis/Genome-analysis-project/analysis/assembly/flye_results/00-assembly/draft_assembly.fasta /crex/proj/uppmax2026-1-61/Genome_Analysis/2_Zhou_2023/reads/genomics_chr3_data/chr3_clean_nanopore.fq.gz
+[M::main] Real time: 5732.069 sec; CPU: 5560.774 sec; Peak RSS: 3.204 GB
+[bam_sort_core] merging from 20 files and 4 in-memory blocks...

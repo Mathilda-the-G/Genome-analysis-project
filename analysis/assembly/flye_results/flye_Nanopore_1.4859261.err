@@ -1,0 +1,3 @@
+[2026-04-10 16:37:34] INFO: Starting Flye 2.9.6-b1802
+[2026-04-10 16:37:34] ERROR: Can't open /gorilla/home/magu2329/Genome_Analysis/Genome-analysis-project/analysis/assembly/flye_results/gorilla/home/magu2329/Genome_Analysis/Genome-analysis-project/code/preprocessing_slurm/*nanopore*.fq.gz
+[2026-04-10 16:37:34] ERROR: Pipeline aborted
