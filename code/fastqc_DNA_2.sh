@@ -2,12 +2,14 @@
 
 #SBATCH -A uppmax2026-1-61 #project code
 #SBATCH -M pelle #partition
-#SBATCH -J FastQC_DNA_2 #name of the job
+#SBATCH -J FastQC #name of the job
 #SBATCH -c 1 #cores
-#SBATCH -t 1:00:00 #time
-#SBATCH --mem=30GB #memory allocated to job
+#SBATCH -t 4:00:00 #time
+#SBATCH --mem=50GB #memory allocated to job
 #SBATCH --output=%x.%j.out  #output file
 #SBATCH --error=%x.%j.err  #error file
+# SBATCH -- mail-type=ALL
+# SBATCH --mail-user mathilda.gustavsson.2329@student.uu.se
 
 module load FastQC/0.12.1-Java-17 #must check that the right thing is loaded by using module load software
 
