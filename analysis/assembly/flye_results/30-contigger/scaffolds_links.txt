@@ -1,0 +1,2 @@
+contig_75	+	contig_51	-
+contig_98	+	contig_15	+

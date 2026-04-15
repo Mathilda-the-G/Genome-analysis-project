@@ -2,7 +2,7 @@
 
 #SBATCH -A uppmax2026-1-61 #project code
 #SBATCH -M pelle #partition
-#SBATCH -J FastQC_DNA_1 #name of the job
+#SBATCH -J FastQC_DNA_2 #name of the job
 #SBATCH -c 1 #cores
 #SBATCH -t 1:00:00 #time
 #SBATCH --mem=30GB #memory allocated to job
