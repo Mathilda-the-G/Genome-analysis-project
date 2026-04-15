@@ -4,7 +4,7 @@
 #SBATCH -M pelle #partition
 #SBATCH -J FastQC #name of the job
 #SBATCH -c 1 #cores
-#SBATCH -t 4:00:00 #time
+#SBATCH -t 2:00:00 #time
 #SBATCH --mem=50GB #memory allocated to job
 #SBATCH --output=%x.%j.out  #output file
 #SBATCH --error=%x.%j.err  #error file
@@ -17,4 +17,4 @@ module load FastQC/0.12.1-Java-17 #must check that the right thing is loaded by 
 cd /home/magu2329/Genome_Analysis/Genome-analysis-project/analysis/preprocessing/trimming_software/fastqc/fastqc_results_DNA_2
 
 # Run FastQC on the file
-fastqc /home/magu2329/Genome_Analysis/Genome-analysis-project/analysis/preprocessing/trimming_software/trimmomatic/trimmomatic_results_DNA/*.fastq.gz
+fastqc -o /home/magu2329/Genome_Analysis/Genome-analysis-project/analysis/preprocessing/trimming_software/fastqc/fastqc_results_DNA_2 /home/magu2329/Genome_Analysis/Genome-analysis-project/analysis/preprocessing/trimming_software/trimmomatic/trimmomatic_results_DNA/*.fastq.gz

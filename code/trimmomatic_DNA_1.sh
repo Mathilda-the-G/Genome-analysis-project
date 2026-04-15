@@ -12,7 +12,7 @@
 module load Trimmomatic/0.39-Java-17 #must check that the right thing is loaded by using module load software
 
 # Go to the directory where I want the output
-cd /home/magu2329/Genome_Analysis/Genome-analysis-project/analysis/preprocessing/trimming_software/trimmomatic_DNA
+cd /home/magu2329/Genome_Analysis/Genome-analysis-project/analysis/preprocessing/trimming_software/trimmomatic/trimmomatic_results_DNA
 
 #input files
 R1=/crex/proj/uppmax2026-1-61/Genome_Analysis/2_Zhou_2023/reads/genomics_chr3_data/chr3_illumina_R1.fastq.gz
