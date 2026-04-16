@@ -1,24 +1,27 @@
 #!/bin/bash
 
-#SBATCH -A uppmax2026-1-61 #project code
-#SBATCH -M pelle #partition
-#SBATCH -J BWA #name of the job
-#SBATCH -c 1 #cores
-#SBATCH -t 0:10 #time
-#SBATCH --mem=10GB #memory allocated to job
-#SBATCH --output=%x.%j.out  #output file
-#SBATCH --error=%x.%j.err  #error file
+#SBATCH -A uppmax2026-1-61
+#SBATCH -M pelle
+#SBATCH -J BWA
+#SBATCH -c 2
+#SBATCH -t 02:00:00
+#SBATCH --mem=64GB
+#SBATCH --output=%x.%j.out
+#SBATCH --error=%x.%j.err
 
-module load BWA/0.7.19-GCCcore-13.3.0 #must check that the right thing is loaded by using module load software
+# Load modules
+module load bwa-mem2/2.3-GCC-13.3.0
+module load SAMtools/1.19.2-GCC-13.3.0
 
-# Go to the directory where I want the output
-cd /home/magu2329/Genome_Analysis/Genome-analysis-project/analysis/assembly/bwa_results
 
+# Input files
 ref=/home/magu2329/Genome_Analysis/Genome-analysis-project/analysis/assembly/flye_results/assembly.fasta
-read1=/home/magu2329/Genome_Analysis/Genome-analysis-project/analysis/preprocessing/trimming_software/trimmomatic/trimmomatic_results_DNA/R1_paired.fastq.gz
-read2=/home/magu2329/Genome_Analysis/Genome-analysis-project/analysis/preprocessing/trimming_software/trimmomatic/trimmomatic_results_DNA/R2_paired.fastq.gz
+read1=/home/magu2329/Genome_Analysis/Genome-analysis-project/analysis/preprocessing/trimming_software/trimmomatic/DNA_1/R1_paired.fastq.gz
+read2=/home/magu2329/Genome_Analysis/Genome-analysis-project/analysis/preprocessing/trimming_software/trimmomatic/DNA_1/R2_paired.fastq.gz
 
+outdir=/home/magu2329/Genome_Analysis/Genome-analysis-project/analysis/assembly/bwa_results
 
-# Run bwa on the file
-bwa aln $ref $read1 > read1.sai; bwa aln $ref $read2 > read2.sai
-bwa sampe $ref read1.sai read2.sai $read1 $read2 > aln-pe.sam
+bwa-mem2 index $ref
+bwa-mem2 mem -t 2 $ref $read1 $read2 | \
+samtools sort -o $outdir/aligned_reads_sorted.bam
+samtools index $outdir/align_reads_sorted.bam
