@@ -14,13 +14,13 @@ module load Trimmomatic/0.39-Java-17 #must check that the right thing is loaded 
 rna=/crex/proj/uppmax2026-1-61/Genome_Analysis/2_Zhou_2023/reads/transcriptomic_data
 outdir=/home/magu2329/Genome_Analysis/Genome-analysis-project/analysis/preprocessing/trimming_software/trimmomatic/RNA_1
 
-for x in $rna:
+for x, y in $rna;
 do
     trimmomatic PE \
-        -threads 1 \
-        -o $outdir
-        x \
-        x \
+    -threads 1 \
+    <input 1> <input 2> \
+    <paired output 1> <unpaired output 1> \
+    <paired output 2> <unpaired output 2> \
         ILLUMINACLIP:TruSeq3-SE:2:30:10 \
         LEADING:3 TRAILING:3 SLIDINGWINDOW:4:15 MINLEN:36
 done

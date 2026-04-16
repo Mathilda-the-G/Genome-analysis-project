@@ -1,0 +1,7 @@
+~/bin/bwa-mem2-2.2.1_x64-linux/bwa-mem2 mem ~/genome_index/assembly ~/Downloads/R1_paired.fastq.gz ~/Downloads/R2_paired.fastq.gz 
+| samtools sort -o ~/alignment/aligned.sorted.bam
+
+#later
+samtools index ~/alignment/aligned.sorted.bam
+#running echo to see if it completed sucsessfully by printing a 0
+echo $?
