@@ -1,0 +1,2 @@
+Pilon script for local Linux:
+pilon --outdir ~/polished --genome ~/genome_index/assembly.fasta --frags ~/alignment/aligned.sorted.bam --threads 4

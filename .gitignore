@@ -12,4 +12,9 @@
 *.bed.gz
 repeat_grph_dump
 *.bai
+*.log
+*.checkpoint
+*.mpi
+
+/analysis/
 
