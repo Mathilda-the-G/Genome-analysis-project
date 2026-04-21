@@ -14,5 +14,6 @@ module load RepeatMasker/4.2.1-foss-2024a
 
 input=/home/magu2329/Genome_Analysis/Genome-analysis-project/analysis/assembly/pilon_results/polished/pilon.fasta
 outdir=/home/magu2329/Genome_Analysis/Genome-analysis-project/analysis/assembly/repeatmasker_results
+library=/home/magu2329/Genome_Analysis/Genome-analysis-project/analysis/assembly/repeatmodeler_results/library
 
-RepeatMasker -dir $outdir -species  $input
+RepeatMasker -dir $outdir -lib $library $input
