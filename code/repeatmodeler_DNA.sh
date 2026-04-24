@@ -12,6 +12,7 @@
 # Load modules
 module load RepeatModeler/2.0.7-foss-2024a
 
+cd /home/magu2329/Genome_Analysis/Genome-analysis-project/analysis/assembly/repeatmasker_results/
 input=/home/magu2329/Genome_Analysis/Genome-analysis-project/analysis/assembly/pilon_results/polished/pilon.fasta
 
 outdir=/home/magu2329/Genome_Analysis/Genome-analysis-project/analysis/assembly/repeatmodeler_results_2/
