@@ -16,6 +16,7 @@ module load eggnog-mapper/2.1.13-gfbf-2024a
 outdir=/home/magu2329/Genome_Analysis/Genome-analysis-project/analysis/assembly/eggnogmapper_results
 genome=/home/magu2329/Genome_Analysis/Genome-analysis-project/analysis/assembly/braker3_results/braker.aa
 database=/sw/data/uppnex/eggNOG/5.0/rackham/
+gtf=/home/magu2329/Genome_Analysis/Genome-analysis-project/analysis/assembly/braker3_results/braker.gtf
 
 emapper.py \
   -i  $genome \
@@ -25,6 +26,5 @@ emapper.py \
   --output_dir $outdir \
   --cpu 1 \
   --go_evidence experimental \
-  --override \
-  --decorate_gff yes \
+  --decorate_gff $gtf \
   --decorate_gff_ID_field ID
