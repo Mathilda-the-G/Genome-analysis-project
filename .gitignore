@@ -16,7 +16,5 @@ repeat_grph_dump
 *.checkpoint
 *.mpi
 
-/analysis/
-
-/code/resources
+analysis/
 
